@@ -71,5 +71,5 @@ class PublicTests < MiniTest::Test
                      parser.parse("invalid command"))
         assert_equal({:recognized_command => :lookup, :result => ["a"]},
                      parser.parse("lookup 0"))
-    end
+    end 
 end
