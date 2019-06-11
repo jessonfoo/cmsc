@@ -1,7 +1,13 @@
 class RubyIdentifier
   def initialize
+<<<<<<< HEAD
 	  @name_hash ={}
 	  @haters = Array.new
+=======
+
+
+blah
+>>>>>>> fa04c7ce406d668525f09e9ec7c56f3b37022c28
   end
 
   # add : String, String ->
