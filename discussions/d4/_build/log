@@ -1,0 +1,17 @@
+# dune runtest -f
+# OCAMLPARAM: unset
+$ /usr/bin/nproc > /tmp/yashashri/dune302f59.output 2> /dev/null
+$ /home/yashashri/.opam/4.07.0/bin/ocamlc.opt -config > /tmp/yashashri/dunefbffbb.output
+$ (cd _build/default && /home/yashashri/.opam/4.07.0/bin/ocamldep.opt -modules -impl src/disc.ml) > _build/default/src/.d4.objs/disc.ml.d
+$ (cd _build/default && /home/yashashri/.opam/4.07.0/bin/ocamlopt.opt -w -40 -g -I src/.d4.objs -I src/.d4.objs/.private -intf-suffix .ml -no-alias-deps -open D4 -o src/.d4.objs/d4__Disc.cmx -c -impl src/disc.ml)
+$ (cd _build/default && /home/yashashri/.opam/4.07.0/bin/ocamlopt.opt -w -40 -g -a -o src/d4.cmxa src/.d4.objs/d4.cmx src/.d4.objs/d4__Disc.cmx)
+$ (cd _build/default && /home/yashashri/.opam/4.07.0/bin/ocamlopt.opt -w -40 -g -o test/public.exe -I /home/yashashri/.opam/4.07.0/lib/bytes -I /home/yashashri/.opam/4.07.0/lib/oUnit -I src src/d4.cmxa /home/yashashri/.opam/4.07.0/lib/ocaml/unix.cmxa /home/yashashri/.opam/4.07.0/lib/oUnit/oUnitAdvanced.cmxa /home/yashashri/.opam/4.07.0/lib/oUnit/oUnit.cmxa test/.public.eobjs/public.cmx)
+$ (cd _build/default && /home/yashashri/.opam/4.07.0/bin/ocamlopt.opt -w -40 -g -o test/student.exe -I /home/yashashri/.opam/4.07.0/lib/bytes -I /home/yashashri/.opam/4.07.0/lib/oUnit -I src src/d4.cmxa /home/yashashri/.opam/4.07.0/lib/ocaml/unix.cmxa /home/yashashri/.opam/4.07.0/lib/oUnit/oUnitAdvanced.cmxa /home/yashashri/.opam/4.07.0/lib/oUnit/oUnit.cmxa test/.public.eobjs/student.cmx)
+$ (cd _build/default/test && ./public.exe)
+> .....
+> Ran: 5 tests in: 0.12 seconds.
+> OK
+$ (cd _build/default/test && ./student.exe)
+> .
+> Ran: 1 tests in: 0.11 seconds.
+> OK

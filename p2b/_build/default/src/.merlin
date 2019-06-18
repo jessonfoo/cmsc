@@ -1,0 +1,3 @@
+B ../_build/default/src/.p2b.objs
+S .
+FLG -open P2b -w -40

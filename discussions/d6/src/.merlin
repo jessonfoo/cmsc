@@ -1,0 +1,3 @@
+B ../_build/default/src/.d6.objs
+S .
+FLG -open D6 -w -40

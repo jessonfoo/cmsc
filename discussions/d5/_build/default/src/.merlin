@@ -1,0 +1,3 @@
+B ../_build/default/src/.d5.objs
+S .
+FLG -open D5 -w -40

@@ -1,0 +1,3 @@
+B ../_build/default/src/.d4.objs
+S .
+FLG -open D4 -w -40

@@ -1,0 +1,19 @@
+# dune runtest
+# OCAMLPARAM: unset
+$ /usr/bin/nproc > /tmp/yashashri/dune582941.output 2> /dev/null
+$ /usr/local/bin/ocamlc.opt -config > /tmp/yashashri/dune5fd760.output
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -impl src/disc.ml) > _build/default/src/.d5.objs/disc.ml.d
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -I src/.d5.objs -I src/.d5.objs/.private -intf-suffix .ml -no-alias-deps -open D5 -o src/.d5.objs/d5__Disc.cmx -c -impl src/disc.ml)
+> File "src/disc.ml", line 13, characters 4-86:
+> Warning 8: this pattern-matching is not exhaustive.
+> Here is an example of a case that is not matched:
+> []
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -a -o src/d5.cmxa src/.d5.objs/d5.cmx src/.d5.objs/d5__Disc.cmx)
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -I test/.public.eobjs -I /home/yashashri/.opam/4.07.0/lib/bytes -I /home/yashashri/.opam/4.07.0/lib/oUnit -I src/.d5.objs -intf-suffix .ml -no-alias-deps -o test/.public.eobjs/student.cmx -c -impl test/student.ml)
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -I test/.public.eobjs -I /home/yashashri/.opam/4.07.0/lib/bytes -I /home/yashashri/.opam/4.07.0/lib/oUnit -I src/.d5.objs -intf-suffix .ml -no-alias-deps -o test/.public.eobjs/public.cmx -c -impl test/public.ml)
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -o test/student.exe -I /home/yashashri/.opam/4.07.0/lib/bytes -I /home/yashashri/.opam/4.07.0/lib/oUnit -I src src/d5.cmxa /home/yashashri/.opam/4.07.0/lib/ocaml/unix.cmxa /home/yashashri/.opam/4.07.0/lib/oUnit/oUnitAdvanced.cmxa /home/yashashri/.opam/4.07.0/lib/oUnit/oUnit.cmxa test/.public.eobjs/student.cmx)
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -o test/public.exe -I /home/yashashri/.opam/4.07.0/lib/bytes -I /home/yashashri/.opam/4.07.0/lib/oUnit -I src src/d5.cmxa /home/yashashri/.opam/4.07.0/lib/ocaml/unix.cmxa /home/yashashri/.opam/4.07.0/lib/oUnit/oUnitAdvanced.cmxa /home/yashashri/.opam/4.07.0/lib/oUnit/oUnit.cmxa test/.public.eobjs/public.cmx)
+$ (cd _build/default/test && ./public.exe)
+> .....
+> Ran: 5 tests in: 0.11 seconds.
+> OK

@@ -1,0 +1,12 @@
+2019-06-13T17:37:17+00:00 WINDOWS-O9ORMVS#02 I: Start test public:1:gcd.
+2019-06-13T17:37:17+00:00 WINDOWS-O9ORMVS#02 I: Test public:1:gcd is successful.
+2019-06-13T17:37:17+00:00 WINDOWS-O9ORMVS#02 I: End test public:1:gcd.
+2019-06-13T17:37:17+00:00 WINDOWS-O9ORMVS#02 I: Start test public:5:max_first_three.
+2019-06-13T17:37:17+00:00 WINDOWS-O9ORMVS#02 I: Test public:5:max_first_three is successful.
+2019-06-13T17:37:17+00:00 WINDOWS-O9ORMVS#02 I: End test public:5:max_first_three.
+2019-06-13T17:37:17+00:00 WINDOWS-O9ORMVS#02 I: Start test public:10:elem.
+2019-06-13T17:37:17+00:00 WINDOWS-O9ORMVS#02 I: Test public:10:elem is successful.
+2019-06-13T17:37:17+00:00 WINDOWS-O9ORMVS#02 I: End test public:10:elem.
+2019-06-13T17:37:17+00:00 WINDOWS-O9ORMVS#02 I: Start test public:14:intersection.
+2019-06-13T17:37:17+00:00 WINDOWS-O9ORMVS#02 I: Test public:14:intersection is successful.
+2019-06-13T17:37:17+00:00 WINDOWS-O9ORMVS#02 I: End test public:14:intersection.

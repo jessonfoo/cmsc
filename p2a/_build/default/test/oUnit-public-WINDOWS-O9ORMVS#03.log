@@ -1,0 +1,12 @@
+2019-06-13T17:37:17+00:00 WINDOWS-O9ORMVS#03 I: Start test public:2:reduced_form.
+2019-06-13T17:37:17+00:00 WINDOWS-O9ORMVS#03 I: Test public:2:reduced_form is successful.
+2019-06-13T17:37:17+00:00 WINDOWS-O9ORMVS#03 I: End test public:2:reduced_form.
+2019-06-13T17:37:17+00:00 WINDOWS-O9ORMVS#03 I: Start test public:4:ack.
+2019-06-13T17:37:17+00:00 WINDOWS-O9ORMVS#03 I: Test public:4:ack is successful.
+2019-06-13T17:37:17+00:00 WINDOWS-O9ORMVS#03 I: End test public:4:ack.
+2019-06-13T17:37:17+00:00 WINDOWS-O9ORMVS#03 I: Start test public:8:assoc_list.
+2019-06-13T17:37:17+00:00 WINDOWS-O9ORMVS#03 I: Test public:8:assoc_list is successful.
+2019-06-13T17:37:17+00:00 WINDOWS-O9ORMVS#03 I: End test public:8:assoc_list.
+2019-06-13T17:37:17+00:00 WINDOWS-O9ORMVS#03 I: Start test public:12:remove.
+2019-06-13T17:37:17+00:00 WINDOWS-O9ORMVS#03 I: Test public:12:remove is successful.
+2019-06-13T17:37:17+00:00 WINDOWS-O9ORMVS#03 I: End test public:12:remove.
