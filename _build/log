@@ -1,0 +1,306 @@
+# dune runtest -f
+# OCAMLPARAM: unset
+$ /usr/bin/nproc > /tmp/yashashri/dunec7cc74.output 2> /dev/null
+$ /usr/local/bin/ocamlc.opt -config > /tmp/yashashri/dunea66816.output
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -impl discussions/d3/test/public.ml) > _build/default/discussions/d3/test/.public.eobjs/public.ml.d
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -impl discussions/d3/test/student.ml) > _build/default/discussions/d3/test/.public.eobjs/student.ml.d
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -impl discussions/d3/src/disc.ml) > _build/default/discussions/d3/src/.d3.objs/disc.ml.d
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -g -bin-annot -I discussions/d3/src/.d3.objs -I discussions/d3/src/.d3.objs/.private -no-alias-deps -opaque -o discussions/d3/src/.d3.objs/d3.cmo -c -impl discussions/d3/src/d3.ml-gen)
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -impl discussions/d4/test/public.ml) > _build/default/discussions/d4/test/.public.eobjs/public.ml.d
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -impl discussions/d4/test/student.ml) > _build/default/discussions/d4/test/.public.eobjs/student.ml.d
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -impl discussions/d4/src/disc.ml) > _build/default/discussions/d4/src/.d4.objs/disc.ml.d
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -g -bin-annot -I discussions/d4/src/.d4.objs -I discussions/d4/src/.d4.objs/.private -no-alias-deps -opaque -o discussions/d4/src/.d4.objs/d4.cmo -c -impl discussions/d4/src/d4.ml-gen)
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -intf discussions/d4/src/disc.mli) > _build/default/discussions/d4/src/.d4.objs/disc.mli.d
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -impl discussions/d5/test/public.ml) > _build/default/discussions/d5/test/.public.eobjs/public.ml.d
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -impl discussions/d5/test/student.ml) > _build/default/discussions/d5/test/.public.eobjs/student.ml.d
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -g -I discussions/d3/src/.d3.objs -I discussions/d3/src/.d3.objs/.private -intf-suffix .ml-gen -no-alias-deps -opaque -o discussions/d3/src/.d3.objs/d3.cmx -c -impl discussions/d3/src/d3.ml-gen)
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -impl discussions/d5/src/disc.ml) > _build/default/discussions/d5/src/.d5.objs/disc.ml.d
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -g -bin-annot -I discussions/d5/src/.d5.objs -I discussions/d5/src/.d5.objs/.private -no-alias-deps -opaque -o discussions/d5/src/.d5.objs/d5.cmo -c -impl discussions/d5/src/d5.ml-gen)
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -intf discussions/d5/src/disc.mli) > _build/default/discussions/d5/src/.d5.objs/disc.mli.d
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -g -I discussions/d4/src/.d4.objs -I discussions/d4/src/.d4.objs/.private -intf-suffix .ml-gen -no-alias-deps -opaque -o discussions/d4/src/.d4.objs/d4.cmx -c -impl discussions/d4/src/d4.ml-gen)
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I discussions/d4/src/.d4.objs -I discussions/d4/src/.d4.objs/.private -no-alias-deps -opaque -open D4 -o discussions/d4/src/.d4.objs/d4__Disc.cmi -c -intf discussions/d4/src/disc.mli)
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -impl discussions/d6/test/public.ml) > _build/default/discussions/d6/test/.public.eobjs/public.ml.d
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -impl discussions/d6/test/student.ml) > _build/default/discussions/d6/test/.public.eobjs/student.ml.d
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -impl discussions/d6/src/disc.ml) > _build/default/discussions/d6/src/.d6.objs/disc.ml.d
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -g -bin-annot -I discussions/d6/src/.d6.objs -I discussions/d6/src/.d6.objs/.private -no-alias-deps -opaque -o discussions/d6/src/.d6.objs/d6.cmo -c -impl discussions/d6/src/d6.ml-gen)
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -g -I discussions/d5/src/.d5.objs -I discussions/d5/src/.d5.objs/.private -intf-suffix .ml-gen -no-alias-deps -opaque -o discussions/d5/src/.d5.objs/d5.cmx -c -impl discussions/d5/src/d5.ml-gen)
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I discussions/d5/src/.d5.objs -I discussions/d5/src/.d5.objs/.private -no-alias-deps -opaque -open D5 -o discussions/d5/src/.d5.objs/d5__Disc.cmi -c -intf discussions/d5/src/disc.mli)
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -intf discussions/d6/src/disc.mli) > _build/default/discussions/d6/src/.d6.objs/disc.mli.d
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I discussions/d4/src/.d4.objs -I discussions/d4/src/.d4.objs/.private -intf-suffix .ml -no-alias-deps -opaque -open D4 -o discussions/d4/src/.d4.objs/d4__Disc.cmx -c -impl discussions/d4/src/disc.ml)
+> File "discussions/d4/src/disc.ml", line 24, characters 8-14:
+> Error (warning 39): unused rec flag.
+> File "discussions/d4/src/disc.ml", line 32, characters 8-15:
+> Error (warning 32): unused value helper2.
+[2]
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -impl p2a/test/public.ml) > _build/default/p2a/test/.public.eobjs/public.ml.d
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -impl p2a/test/student.ml) > _build/default/p2a/test/.public.eobjs/student.ml.d
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -impl p2a/test/testUtils.ml) > _build/default/p2a/test/.public.eobjs/testUtils.ml.d
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -g -I discussions/d6/src/.d6.objs -I discussions/d6/src/.d6.objs/.private -intf-suffix .ml-gen -no-alias-deps -opaque -o discussions/d6/src/.d6.objs/d6.cmx -c -impl discussions/d6/src/d6.ml-gen)
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -impl p2a/src/basics.ml) > _build/default/p2a/src/.basics.objs/basics.ml.d
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I discussions/d5/src/.d5.objs -I discussions/d5/src/.d5.objs/.private -intf-suffix .ml -no-alias-deps -opaque -open D5 -o discussions/d5/src/.d5.objs/d5__Disc.cmx -c -impl discussions/d5/src/disc.ml)
+> File "discussions/d5/src/disc.ml", line 13, characters 4-86:
+> Error (warning 8): this pattern-matching is not exhaustive.
+> Here is an example of a case that is not matched:
+> []
+[2]
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I discussions/d6/src/.d6.objs -I discussions/d6/src/.d6.objs/.private -no-alias-deps -opaque -open D6 -o discussions/d6/src/.d6.objs/d6__Disc.cmi -c -intf discussions/d6/src/disc.mli)
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -intf p2a/src/basics.mli) > _build/default/p2a/src/.basics.objs/basics.mli.d
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -impl p2b/test/public.ml) > _build/default/p2b/test/.public.eobjs/public.ml.d
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -impl p2b/test/student.ml) > _build/default/p2b/test/.public.eobjs/student.ml.d
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -impl p2b/test/testUtils.ml) > _build/default/p2b/test/.public.eobjs/testUtils.ml.d
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -impl p2b/src/data.ml) > _build/default/p2b/src/.p2b.objs/data.ml.d
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -impl p2b/src/funs.ml) > _build/default/p2b/src/.p2b.objs/funs.ml.d
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -impl p2b/src/higher.ml) > _build/default/p2b/src/.p2b.objs/higher.ml.d
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I discussions/d6/src/.d6.objs -I discussions/d6/src/.d6.objs/.private -intf-suffix .ml -no-alias-deps -opaque -open D6 -o discussions/d6/src/.d6.objs/d6__Disc.cmx -c -impl discussions/d6/src/disc.ml)
+> File "discussions/d6/src/disc.ml", line 29, characters 6-7:
+> Error (warning 27): unused variable t.
+> File "discussions/d6/src/disc.ml", line 36, characters 3-4:
+> Error (warning 27): unused variable h.
+> File "discussions/d6/src/disc.ml", line 36, characters 6-7:
+> Error (warning 27): unused variable t.
+[2]
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I p2a/src/.basics.objs -I p2a/src/.basics.objs/.private -no-alias-deps -opaque -o p2a/src/.basics.objs/basics.cmi -c -intf p2a/src/basics.mli)
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -g -bin-annot -I p2b/src/.p2b.objs -I p2b/src/.p2b.objs/.private -no-alias-deps -opaque -o p2b/src/.p2b.objs/p2b.cmo -c -impl p2b/src/p2b.ml-gen)
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I discussions/d3/src/.d3.objs -I discussions/d3/src/.d3.objs/.private -no-alias-deps -opaque -open D3 -o discussions/d3/src/.d3.objs/d3__Disc.cmo -c -impl discussions/d3/src/disc.ml)
+> File "discussions/d3/src/disc.ml", line 2, characters 8-12:
+> Error (warning 39): unused rec flag.
+> File "discussions/d3/src/disc.ml", line 7, characters 8-13:
+> Error (warning 39): unused rec flag.
+> File "discussions/d3/src/disc.ml", line 11, characters 8-18:
+> Error (warning 39): unused rec flag.
+> File "discussions/d3/src/disc.ml", line 17, characters 8-14:
+> Error (warning 39): unused rec flag.
+> File "discussions/d3/src/disc.ml", line 2, characters 14-15:
+> Error (warning 27): unused variable n.
+> File "discussions/d3/src/disc.ml", line 7, characters 15-16:
+> Error (warning 27): unused variable n.
+> File "discussions/d3/src/disc.ml", line 11, characters 20-21:
+> Error (warning 27): unused variable n.
+> File "discussions/d3/src/disc.ml", line 17, characters 16-17:
+> Error (warning 27): unused variable n.
+[2]
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I discussions/d4/test/.public.eobjs -I /home/yashashri/.opam/4.07.0/lib/bytes -I /home/yashashri/.opam/4.07.0/lib/oUnit -I discussions/d4/src/.d4.objs -no-alias-deps -opaque -o discussions/d4/test/.public.eobjs/public.cmo -c -impl discussions/d4/test/public.ml)
+> File "discussions/d4/test/public.ml", line 9, characters 23-27:
+> Error (warning 27): unused variable ctxt.
+> File "discussions/d4/test/public.ml", line 17, characters 20-24:
+> Error (warning 27): unused variable ctxt.
+> File "discussions/d4/test/public.ml", line 22, characters 23-27:
+> Error (warning 27): unused variable ctxt.
+> File "discussions/d4/test/public.ml", line 29, characters 23-27:
+> Error (warning 27): unused variable ctxt.
+> File "discussions/d4/test/public.ml", line 33, characters 25-29:
+> Error (warning 27): unused variable ctxt.
+[2]
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I discussions/d4/test/.public.eobjs -I /home/yashashri/.opam/4.07.0/lib/bytes -I /home/yashashri/.opam/4.07.0/lib/oUnit -I discussions/d4/src/.d4.objs -no-alias-deps -opaque -o discussions/d4/test/.public.eobjs/student.cmo -c -impl discussions/d4/test/student.ml)
+> File "discussions/d4/test/student.ml", line 2, characters 0-12:
+> Error (warning 33): unused open D4.Disc.
+> File "discussions/d4/test/student.ml", line 4, characters 24-28:
+> Error (warning 27): unused variable ctxt.
+[2]
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I discussions/d5/test/.public.eobjs -I /home/yashashri/.opam/4.07.0/lib/bytes -I /home/yashashri/.opam/4.07.0/lib/oUnit -I discussions/d5/src/.d5.objs -no-alias-deps -opaque -o discussions/d5/test/.public.eobjs/student.cmo -c -impl discussions/d5/test/student.ml)
+> File "discussions/d5/test/student.ml", line 2, characters 0-12:
+> Error (warning 33): unused open D5.Disc.
+> File "discussions/d5/test/student.ml", line 4, characters 24-28:
+> Error (warning 27): unused variable ctxt.
+[2]
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I discussions/d5/test/.public.eobjs -I /home/yashashri/.opam/4.07.0/lib/bytes -I /home/yashashri/.opam/4.07.0/lib/oUnit -I discussions/d5/src/.d5.objs -no-alias-deps -opaque -o discussions/d5/test/.public.eobjs/public.cmo -c -impl discussions/d5/test/public.ml)
+> File "discussions/d5/test/public.ml", line 4, characters 16-20:
+> Error (warning 27): unused variable ctxt.
+> File "discussions/d5/test/public.ml", line 9, characters 16-20:
+> Error (warning 27): unused variable ctxt.
+> File "discussions/d5/test/public.ml", line 16, characters 20-24:
+> Error (warning 27): unused variable ctxt.
+> File "discussions/d5/test/public.ml", line 22, characters 16-20:
+> Error (warning 27): unused variable ctxt.
+> File "discussions/d5/test/public.ml", line 23, characters 14-15:
+> Error (warning 27): unused variable x.
+> File "discussions/d5/test/public.ml", line 24, characters 14-15:
+> Error (warning 27): unused variable x.
+> File "discussions/d5/test/public.ml", line 33, characters 18-22:
+> Error (warning 27): unused variable ctxt.
+[2]
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I discussions/d6/test/.public.eobjs -I /home/yashashri/.opam/4.07.0/lib/bytes -I /home/yashashri/.opam/4.07.0/lib/oUnit -I discussions/d6/src/.d6.objs -no-alias-deps -opaque -o discussions/d6/test/.public.eobjs/public.cmo -c -impl discussions/d6/test/public.ml)
+> File "discussions/d6/test/public.ml", line 4, characters 13-17:
+> Error (warning 27): unused variable ctxt.
+> File "discussions/d6/test/public.ml", line 13, characters 15-19:
+> Error (warning 27): unused variable ctxt.
+> File "discussions/d6/test/public.ml", line 18, characters 15-19:
+> Error (warning 27): unused variable ctxt.
+> File "discussions/d6/test/public.ml", line 23, characters 14-18:
+> Error (warning 27): unused variable ctxt.
+> File "discussions/d6/test/public.ml", line 24, characters 14-15:
+> Error (warning 27): unused variable x.
+> File "discussions/d6/test/public.ml", line 25, characters 14-15:
+> Error (warning 27): unused variable x.
+> File "discussions/d6/test/public.ml", line 35, characters 18-22:
+> Error (warning 27): unused variable ctxt.
+[2]
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I p2a/src/.basics.objs -I p2a/src/.basics.objs/.private -intf-suffix .ml -no-alias-deps -opaque -o p2a/src/.basics.objs/basics.cmx -c -impl p2a/src/basics.ml)
+> File "p2a/src/basics.ml", line 54, characters 8-18:
+> Error (warning 39): unused rec flag.
+> File "p2a/src/basics.ml", line 70, characters 8-12:
+> Error (warning 39): unused rec flag.
+> File "p2a/src/basics.ml", line 75, characters 8-14:
+> Error (warning 39): unused rec flag.
+> File "p2a/src/basics.ml", line 107, characters 8-20:
+> Error (warning 39): unused rec flag.
+> File "p2a/src/basics.ml", line 32, characters 15-16:
+> Error (warning 27): unused variable t.
+> File "p2a/src/basics.ml", line 78, characters 3-4:
+> Error (warning 27): unused variable h.
+> File "p2a/src/basics.ml", line 78, characters 6-7:
+> Error (warning 27): unused variable t.
+> File "p2a/src/basics.ml", line 98, characters 11-13:
+> Error (warning 27): unused variable h2.
+> File "p2a/src/basics.ml", line 98, characters 15-17:
+> Error (warning 27): unused variable t2.
+> File "p2a/src/basics.ml", line 105, characters 11-13:
+> Error (warning 27): unused variable h2.
+> File "p2a/src/basics.ml", line 105, characters 15-17:
+> Error (warning 27): unused variable t2.
+> File "p2a/src/basics.ml", line 107, characters 8-20:
+> Error (warning 32): unused value product_help.
+> File "p2a/src/basics.ml", line 107, characters 21-22:
+> Error (warning 27): unused variable x.
+[2]
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -g -I p2b/src/.p2b.objs -I p2b/src/.p2b.objs/.private -intf-suffix .ml-gen -no-alias-deps -opaque -o p2b/src/.p2b.objs/p2b.cmx -c -impl p2b/src/p2b.ml-gen)
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I discussions/d6/test/.public.eobjs -I /home/yashashri/.opam/4.07.0/lib/bytes -I /home/yashashri/.opam/4.07.0/lib/oUnit -I discussions/d6/src/.d6.objs -no-alias-deps -opaque -o discussions/d6/test/.public.eobjs/student.cmo -c -impl discussions/d6/test/student.ml)
+> File "discussions/d6/test/student.ml", line 2, characters 0-12:
+> Error (warning 33): unused open D6.Disc.
+> File "discussions/d6/test/student.ml", line 4, characters 24-28:
+> Error (warning 27): unused variable ctxt.
+[2]
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I p2a/test/.public.eobjs -I /home/yashashri/.opam/4.07.0/lib/bytes -I /home/yashashri/.opam/4.07.0/lib/oUnit -I p2a/src/.basics.objs -no-alias-deps -opaque -o p2a/test/.public.eobjs/testUtils.cmo -c -impl p2a/test/testUtils.ml)
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I p2b/src/.p2b.objs -I p2b/src/.p2b.objs/.private -no-alias-deps -opaque -open P2b -o p2b/src/.p2b.objs/p2b__Funs.cmo -c -impl p2b/src/funs.ml)
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I p2a/test/.public.eobjs -I /home/yashashri/.opam/4.07.0/lib/bytes -I /home/yashashri/.opam/4.07.0/lib/oUnit -I p2a/src/.basics.objs -no-alias-deps -opaque -o p2a/test/.public.eobjs/public.cmo -c -impl p2a/test/public.ml)
+> File "p2a/test/public.ml", line 5, characters 14-18:
+> Error (warning 27): unused variable ctxt.
+> File "p2a/test/public.ml", line 11, characters 13-17:
+> Error (warning 27): unused variable ctxt.
+> File "p2a/test/public.ml", line 17, characters 22-26:
+> Error (warning 27): unused variable ctxt.
+> File "p2a/test/public.ml", line 23, characters 15-19:
+> Error (warning 27): unused variable ctxt.
+> File "p2a/test/public.ml", line 29, characters 13-17:
+> Error (warning 27): unused variable ctxt.
+> File "p2a/test/public.ml", line 34, characters 25-29:
+> Error (warning 27): unused variable ctxt.
+> File "p2a/test/public.ml", line 40, characters 19-23:
+> Error (warning 27): unused variable ctxt.
+> File "p2a/test/public.ml", line 45, characters 14-18:
+> Error (warning 27): unused variable ctxt.
+> File "p2a/test/public.ml", line 50, characters 20-24:
+> Error (warning 27): unused variable ctxt.
+> File "p2a/test/public.ml", line 55, characters 13-17:
+> Error (warning 27): unused variable ctxt.
+> File "p2a/test/public.ml", line 60, characters 14-18:
+> Error (warning 27): unused variable ctxt.
+> File "p2a/test/public.ml", line 65, characters 16-20:
+> Error (warning 27): unused variable ctxt.
+> File "p2a/test/public.ml", line 70, characters 15-19:
+> Error (warning 27): unused variable ctxt.
+> File "p2a/test/public.ml", line 75, characters 22-26:
+> Error (warning 27): unused variable ctxt.
+> File "p2a/test/public.ml", line 80, characters 17-21:
+> Error (warning 27): unused variable ctxt.
+> File "p2a/test/public.ml", line 85, characters 16-20:
+> Error (warning 27): unused variable ctxt.
+[2]
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I p2a/test/.public.eobjs -I /home/yashashri/.opam/4.07.0/lib/bytes -I /home/yashashri/.opam/4.07.0/lib/oUnit -I p2a/src/.basics.objs -intf-suffix .ml -no-alias-deps -opaque -o p2a/test/.public.eobjs/testUtils.cmx -c -impl p2a/test/testUtils.ml)
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I p2a/test/.public.eobjs -I /home/yashashri/.opam/4.07.0/lib/bytes -I /home/yashashri/.opam/4.07.0/lib/oUnit -I p2a/src/.basics.objs -no-alias-deps -opaque -o p2a/test/.public.eobjs/student.cmo -c -impl p2a/test/student.ml)
+> File "p2a/test/student.ml", line 5, characters 14-18:
+> Error (warning 27): unused variable ctxt.
+> File "p2a/test/student.ml", line 11, characters 13-17:
+> Error (warning 27): unused variable ctxt.
+> File "p2a/test/student.ml", line 17, characters 22-26:
+> Error (warning 27): unused variable ctxt.
+> File "p2a/test/student.ml", line 23, characters 15-19:
+> Error (warning 27): unused variable ctxt.
+> File "p2a/test/student.ml", line 29, characters 13-17:
+> Error (warning 27): unused variable ctxt.
+> File "p2a/test/student.ml", line 34, characters 25-29:
+> Error (warning 27): unused variable ctxt.
+> File "p2a/test/student.ml", line 40, characters 19-23:
+> Error (warning 27): unused variable ctxt.
+> File "p2a/test/student.ml", line 45, characters 14-18:
+> Error (warning 27): unused variable ctxt.
+> File "p2a/test/student.ml", line 50, characters 20-24:
+> Error (warning 27): unused variable ctxt.
+> File "p2a/test/student.ml", line 55, characters 13-17:
+> Error (warning 27): unused variable ctxt.
+> File "p2a/test/student.ml", line 60, characters 14-18:
+> Error (warning 27): unused variable ctxt.
+> File "p2a/test/student.ml", line 65, characters 16-20:
+> Error (warning 27): unused variable ctxt.
+> File "p2a/test/student.ml", line 70, characters 15-19:
+> Error (warning 27): unused variable ctxt.
+> File "p2a/test/student.ml", line 75, characters 22-26:
+> Error (warning 27): unused variable ctxt.
+> File "p2a/test/student.ml", line 82, characters 17-21:
+> Error (warning 27): unused variable ctxt.
+> File "p2a/test/student.ml", line 87, characters 16-20:
+> Error (warning 27): unused variable ctxt.
+[2]
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I p2b/src/.p2b.objs -I p2b/src/.p2b.objs/.private -intf-suffix .ml -no-alias-deps -opaque -open P2b -o p2b/src/.p2b.objs/p2b__Funs.cmx -c -impl p2b/src/funs.ml)
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I p2b/src/.p2b.objs -I p2b/src/.p2b.objs/.private -no-alias-deps -opaque -open P2b -o p2b/src/.p2b.objs/p2b__Data.cmo -c -impl p2b/src/data.ml)
+> File "p2b/src/data.ml", line 93, characters 8-12:
+> Error (warning 39): unused rec flag.
+> File "p2b/src/data.ml", line 17, characters 16-17:
+> Error (warning 27): unused variable l.
+> File "p2b/src/data.ml", line 17, characters 19-20:
+> Error (warning 27): unused variable r.
+> File "p2b/src/data.ml", line 23, characters 16-17:
+> Error (warning 27): unused variable l.
+> File "p2b/src/data.ml", line 24, characters 16-17:
+> Error (warning 27): unused variable l.
+> File "p2b/src/data.ml", line 24, characters 19-20:
+> Error (warning 27): unused variable r.
+> File "p2b/src/data.ml", line 25, characters 13-14:
+> Error (warning 27): unused variable y.
+> File "p2b/src/data.ml", line 25, characters 19-20:
+> Error (warning 27): unused variable r.
+> File "p2b/src/data.ml", line 32, characters 12-13:
+> Error (warning 27): unused variable y.
+> File "p2b/src/data.ml", line 37, characters 15-16:
+> Error (warning 27): unused variable l.
+> File "p2b/src/data.ml", line 38, characters 12-13:
+> Error (warning 27): unused variable y.
+> File "p2b/src/data.ml", line 38, characters 15-16:
+> Error (warning 27): unused variable l.
+> File "p2b/src/data.ml", line 47, characters 18-19:
+> Error (warning 27): unused variable r.
+> File "p2b/src/data.ml", line 48, characters 15-16:
+> Error (warning 27): unused variable l.
+> File "p2b/src/data.ml", line 49, characters 18-19:
+> Error (warning 27): unused variable r.
+> File "p2b/src/data.ml", line 50, characters 15-16:
+> Error (warning 27): unused variable l.
+> File "p2b/src/data.ml", line 51, characters 12-13:
+> Error (warning 27): unused variable z.
+> File "p2b/src/data.ml", line 51, characters 18-19:
+> Error (warning 27): unused variable r.
+> File "p2b/src/data.ml", line 52, characters 12-13:
+> Error (warning 27): unused variable z.
+> File "p2b/src/data.ml", line 52, characters 15-16:
+> Error (warning 27): unused variable l.
+> File "p2b/src/data.ml", line 75, characters 16-17:
+> Error (warning 27): unused variable l.
+> File "p2b/src/data.ml", line 75, characters 19-20:
+> Error (warning 27): unused variable r.
+> File "p2b/src/data.ml", line 80, characters 4-5:
+> Error (warning 27): unused variable f.
+> File "p2b/src/data.ml", line 81, characters 16-17:
+> Error (warning 27): unused variable l.
+> File "p2b/src/data.ml", line 82, characters 16-17:
+> Error (warning 27): unused variable l.
+> File "p2b/src/data.ml", line 82, characters 19-20:
+> Error (warning 27): unused variable r.
+> File "p2b/src/data.ml", line 83, characters 13-14:
+> Error (warning 27): unused variable y.
+> File "p2b/src/data.ml", line 83, characters 19-20:
+> Error (warning 27): unused variable r.
+> File "p2b/src/data.ml", line 90, characters 4-5:
+> Error (warning 27): unused variable f.
+[2]
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I p2b/src/.p2b.objs -I p2b/src/.p2b.objs/.private -no-alias-deps -opaque -open P2b -o p2b/src/.p2b.objs/p2b__Higher.cmo -c -impl p2b/src/higher.ml)
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I p2b/src/.p2b.objs -I p2b/src/.p2b.objs/.private -intf-suffix .ml -no-alias-deps -opaque -open P2b -o p2b/src/.p2b.objs/p2b__Higher.cmx -c -impl p2b/src/higher.ml)

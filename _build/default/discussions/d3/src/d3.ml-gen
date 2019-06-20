@@ -1,0 +1,2 @@
+(** @canonical D3.Disc *)
+module Disc = D3__Disc

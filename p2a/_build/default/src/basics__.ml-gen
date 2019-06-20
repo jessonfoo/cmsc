@@ -1,0 +1,5 @@
+(** @canonical Basics.Basics *)
+module Basics = Basics
+
+(** @canonical Basics.Quiz2 *)
+module Quiz2 = Basics__Quiz2
