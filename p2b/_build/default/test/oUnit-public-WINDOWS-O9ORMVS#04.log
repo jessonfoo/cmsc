@@ -1,9 +1,6 @@
-2019-06-18T22:46:44+00:00 WINDOWS-O9ORMVS#04 I: Start test public:3:common_1.
-2019-06-18T22:46:44+00:00 WINDOWS-O9ORMVS#04 E: Test public:3:common_1 exited with an error.
-2019-06-18T22:46:44+00:00 WINDOWS-O9ORMVS#04 E: Failure("unimplemented") in test public:3:common_1.
-2019-06-18T22:46:44+00:00 WINDOWS-O9ORMVS#04 E: Raised at file "stdlib.ml", line 33, characters 17-33
-2019-06-18T22:46:44+00:00 WINDOWS-O9ORMVS#04 E: Called from file "src/data.ml" (inlined), line 40, characters 27-51
-2019-06-18T22:46:44+00:00 WINDOWS-O9ORMVS#04 E: Called from file "test/public.ml", line 93, characters 43-61
-2019-06-18T22:46:44+00:00 WINDOWS-O9ORMVS#04 E: Called from file "src/oUnitRunner.ml", line 46, characters 13-26
-2019-06-18T22:46:44+00:00 WINDOWS-O9ORMVS#04 E: 
-2019-06-18T22:46:44+00:00 WINDOWS-O9ORMVS#04 I: End test public:3:common_1.
+2019-06-20T15:39:56+00:00 WINDOWS-O9ORMVS#04 I: Start test public:3:common_1.
+2019-06-20T15:39:56+00:00 WINDOWS-O9ORMVS#04 I: Test public:3:common_1 is successful.
+2019-06-20T15:39:56+00:00 WINDOWS-O9ORMVS#04 I: End test public:3:common_1.
+2019-06-20T15:39:56+00:00 WINDOWS-O9ORMVS#04 I: Start test public:8:qs.
+2019-06-20T15:39:56+00:00 WINDOWS-O9ORMVS#04 I: Test public:8:qs is successful.
+2019-06-20T15:39:56+00:00 WINDOWS-O9ORMVS#04 I: End test public:8:qs.

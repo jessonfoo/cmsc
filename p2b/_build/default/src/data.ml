@@ -34,10 +34,25 @@ let rec int_size t =
 let rec int_max t =
   match t with
   |IntLeaf -> invalid_arg "int_max"
-  |IntNode (y, l, r) -> int_max r
   |IntNode (y, l, IntLeaf) -> y
+  |IntNode (y, l, r) -> int_max r
 
-let rec int_common t x y = failwith "unimplemented"
+let rec int_common t x y = 
+  if (int_mem x t && int_mem y t) then
+    if (x = y) then
+      x
+    else
+  match t with
+  |IntLeaf -> invalid_arg "int_common"
+  |IntNode (z, l, r) when (int_mem x l) && not (int_mem y l) -> z
+  |IntNode (z, l, r) when int_mem x r && not (int_mem y r) -> z
+  |IntNode (z, l, r) when not (int_mem x l) && int_mem y l -> z
+  |IntNode (z, l, r) when not (int_mem x r) && int_mem y r -> z
+  |IntNode (z, l, r) when int_mem x l && int_mem y l -> int_common l x y
+  |IntNode (z, l, r) -> int_common r x y
+  else
+    invalid_arg "int_common"
+
 
 (***************************)
 (* Part 3: Polymorphic BST *)
@@ -70,17 +85,22 @@ let rec pmem x t =
 let pinsert_all lst t =
   fold (fun a x -> pinsert x a) t lst
 
-let rec p_as_list t = failwith "unimplemented"
+let rec p_as_list t = 
+  match t with
+  |(f, Leaf) -> []
+  |(f, Node (y, l, r)) -> (p_as_list (f, l))@[y]@(p_as_list (f, r))
 
-let pmap f t = failwith "unimplemented"
+let rec pmap f t =
+  let mapped_lst = map f (p_as_list t) in
+  pinsert_all mapped_lst (empty_ptree (fst t))
 
 (*******************************)
 (* Part 4: Shapes with Records *)
 (*******************************)
 
 type pt = { x: int; y: int }
-type shape = 
-    Circ of { radius: float; center: pt }
+type shape =
+  Circ of { radius: float; center: pt }
   | Rect of { width: float; height: float; upper: pt }
 
 let area s =

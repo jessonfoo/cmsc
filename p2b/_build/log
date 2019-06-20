@@ -1,80 +1,24 @@
 # dune runtest -f
 # OCAMLPARAM: unset
-$ /usr/bin/nproc > /tmp/yashashri/dune3bb773.output 2> /dev/null
-$ /usr/local/bin/ocamlc.opt -config > /tmp/yashashri/dune16184f.output
+$ /usr/bin/nproc > /tmp/yashashri/dune03d3a4.output 2> /dev/null
+$ /usr/local/bin/ocamlc.opt -config > /tmp/yashashri/dunea498a3.output
 $ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -impl src/data.ml) > _build/default/src/.p2b.objs/data.ml.d
 $ (cd _build/default && /usr/local/bin/ocamlc.opt -w -40 -g -bin-annot -I src/.p2b.objs -I src/.p2b.objs/.private -no-alias-deps -open P2b -o src/.p2b.objs/p2b__Data.cmo -c -impl src/data.ml)
-> File "src/data.ml", line 38, characters 3-26:
-> Warning 11: this match case is unused.
-$ (cd _build/default && /usr/local/bin/ocamlc.opt -w -40 -g -bin-annot -I test/.public.eobjs -I /home/yashashri/.opam/4.07.0/lib/bytes -I /home/yashashri/.opam/4.07.0/lib/oUnit -I src/.p2b.objs -no-alias-deps -o test/.public.eobjs/student.cmo -c -impl test/student.ml)
 $ (cd _build/default && /usr/local/bin/ocamlc.opt -w -40 -g -bin-annot -I test/.public.eobjs -I /home/yashashri/.opam/4.07.0/lib/bytes -I /home/yashashri/.opam/4.07.0/lib/oUnit -I src/.p2b.objs -no-alias-deps -o test/.public.eobjs/testUtils.cmo -c -impl test/testUtils.ml)
-$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -I src/.p2b.objs -I src/.p2b.objs/.private -intf-suffix .ml -no-alias-deps -open P2b -o src/.p2b.objs/p2b__Data.cmx -c -impl src/data.ml)
-> File "src/data.ml", line 38, characters 3-26:
-> Warning 11: this match case is unused.
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w -40 -g -bin-annot -I test/.public.eobjs -I /home/yashashri/.opam/4.07.0/lib/bytes -I /home/yashashri/.opam/4.07.0/lib/oUnit -I src/.p2b.objs -no-alias-deps -o test/.public.eobjs/student.cmo -c -impl test/student.ml)
 $ (cd _build/default && /usr/local/bin/ocamlc.opt -w -40 -g -bin-annot -I test/.public.eobjs -I /home/yashashri/.opam/4.07.0/lib/bytes -I /home/yashashri/.opam/4.07.0/lib/oUnit -I src/.p2b.objs -no-alias-deps -o test/.public.eobjs/public.cmo -c -impl test/public.ml)
-$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -a -o src/p2b.cmxa src/.p2b.objs/p2b.cmx src/.p2b.objs/p2b__Funs.cmx src/.p2b.objs/p2b__Higher.cmx src/.p2b.objs/p2b__Data.cmx)
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -I src/.p2b.objs -I src/.p2b.objs/.private -intf-suffix .ml -no-alias-deps -open P2b -o src/.p2b.objs/p2b__Data.cmx -c -impl src/data.ml)
 $ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -I test/.public.eobjs -I /home/yashashri/.opam/4.07.0/lib/bytes -I /home/yashashri/.opam/4.07.0/lib/oUnit -I src/.p2b.objs -intf-suffix .ml -no-alias-deps -o test/.public.eobjs/student.cmx -c -impl test/student.ml)
 $ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -I test/.public.eobjs -I /home/yashashri/.opam/4.07.0/lib/bytes -I /home/yashashri/.opam/4.07.0/lib/oUnit -I src/.p2b.objs -intf-suffix .ml -no-alias-deps -o test/.public.eobjs/testUtils.cmx -c -impl test/testUtils.ml)
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -a -o src/p2b.cmxa src/.p2b.objs/p2b.cmx src/.p2b.objs/p2b__Funs.cmx src/.p2b.objs/p2b__Higher.cmx src/.p2b.objs/p2b__Data.cmx)
 $ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -I test/.public.eobjs -I /home/yashashri/.opam/4.07.0/lib/bytes -I /home/yashashri/.opam/4.07.0/lib/oUnit -I src/.p2b.objs -intf-suffix .ml -no-alias-deps -o test/.public.eobjs/public.cmx -c -impl test/public.ml)
 $ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -o test/student.exe -I /home/yashashri/.opam/4.07.0/lib/bytes -I /home/yashashri/.opam/4.07.0/lib/oUnit -I src src/p2b.cmxa /home/yashashri/.opam/4.07.0/lib/ocaml/unix.cmxa /home/yashashri/.opam/4.07.0/lib/oUnit/oUnitAdvanced.cmxa /home/yashashri/.opam/4.07.0/lib/oUnit/oUnit.cmxa test/.public.eobjs/student.cmx)
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -o test/public.exe -I /home/yashashri/.opam/4.07.0/lib/bytes -I /home/yashashri/.opam/4.07.0/lib/oUnit -I src src/p2b.cmxa /home/yashashri/.opam/4.07.0/lib/ocaml/unix.cmxa /home/yashashri/.opam/4.07.0/lib/oUnit/oUnitAdvanced.cmxa /home/yashashri/.opam/4.07.0/lib/oUnit/oUnit.cmxa test/.public.eobjs/testUtils.cmx test/.public.eobjs/public.cmx)
 $ (cd _build/default/test && ./student.exe)
 > .
-> Ran: 1 tests in: 0.12 seconds.
+> Ran: 1 tests in: 0.11 seconds.
 > OK
-$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -o test/public.exe -I /home/yashashri/.opam/4.07.0/lib/bytes -I /home/yashashri/.opam/4.07.0/lib/oUnit -I src src/p2b.cmxa /home/yashashri/.opam/4.07.0/lib/ocaml/unix.cmxa /home/yashashri/.opam/4.07.0/lib/oUnit/oUnitAdvanced.cmxa /home/yashashri/.opam/4.07.0/lib/oUnit/oUnit.cmxa test/.public.eobjs/testUtils.cmx test/.public.eobjs/public.cmx)
 $ (cd _build/default/test && ./public.exe)
-> ..EEE...E
-> ==============================================================================
-> Error: public:3:common_1.
->
-> File "/home/yashashri/cmsc330summer19-public/p2b/_build/default/test/oUnit-public-WINDOWS-O9ORMVS#04.log", line 2, characters 1-1:
-> Error: public:3:common_1 (in the log).
->
-> Raised at file "stdlib.ml", line 33, characters 17-33
-> Called from file "src/data.ml" (inlined), line 40, characters 27-51
-> Called from file "test/public.ml", line 93, characters 43-61
-> Called from file "src/oUnitRunner.ml", line 46, characters 13-26
->
-> Failure("unimplemented")
-> ------------------------------------------------------------------------------
-> ==============================================================================
-> Error: public:6:ptree_2.
->
-> File "/home/yashashri/cmsc330summer19-public/p2b/_build/default/test/oUnit-public-WINDOWS-O9ORMVS#01.log", line 5, characters 1-1:
-> Error: public:6:ptree_2 (in the log).
->
-> Raised at file "stdlib.ml", line 33, characters 17-33
-> Called from file "src/data.ml" (inlined), line 73, characters 22-46
-> Called from file "test/public.ml", line 156, characters 49-61
-> Called from file "src/oUnitRunner.ml", line 46, characters 13-26
->
-> Failure("unimplemented")
-> ------------------------------------------------------------------------------
-> ==============================================================================
-> Error: public:4:common_2.
->
-> File "/home/yashashri/cmsc330summer19-public/p2b/_build/default/test/oUnit-public-WINDOWS-O9ORMVS#03.log", line 10, characters 1-1:
-> Error: public:4:common_2 (in the log).
->
-> Raised at file "stdlib.ml", line 33, characters 17-33
-> Called from file "src/data.ml" (inlined), line 40, characters 27-51
-> Called from file "test/public.ml", line 107, characters 43-60
-> Called from file "src/oUnitRunner.ml", line 46, characters 13-26
->
-> Failure("unimplemented")
-> ------------------------------------------------------------------------------
-> ==============================================================================
-> Error: public:2:int_tree.
->
-> File "/home/yashashri/cmsc330summer19-public/p2b/_build/default/test/oUnit-public-WINDOWS-O9ORMVS#03.log", line 2, characters 1-1:
-> Error: public:2:int_tree (in the log).
->
-> Raised at file "stdlib.ml", line 34, characters 20-45
-> Called from file "test/public.ml", line 82, characters 44-54
-> Called from file "src/oUnitRunner.ml", line 46, characters 13-26
->
-> Invalid_argument("int_max")
-> ------------------------------------------------------------------------------
-> Ran: 9 tests in: 0.04 seconds.
-> FAILED: Cases: 9 Tried: 9 Errors: 4 Failures: 0 Skip:  0 Todo: 0 Timeouts: 0.
-[1]
+> .........
+> Ran: 9 tests in: 0.11 seconds.
+> OK
