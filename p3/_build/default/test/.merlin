@@ -1,0 +1,13 @@
+B /home/yashashri/.opam/4.07.0/lib/bytes
+B /home/yashashri/.opam/4.07.0/lib/oUnit
+B /home/yashashri/.opam/4.07.0/lib/ocaml
+B /home/yashashri/cmsc330summer19-public/p3/dep/sets
+B ../_build/default/src/.p3.objs
+B ../_build/default/test/.public.eobjs
+S /home/yashashri/.opam/4.07.0/lib/bytes
+S /home/yashashri/.opam/4.07.0/lib/oUnit
+S /home/yashashri/.opam/4.07.0/lib/ocaml
+S /home/yashashri/cmsc330summer19-public/p3/dep/sets
+S ../src
+S .
+FLG -w -40

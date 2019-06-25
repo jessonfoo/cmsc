@@ -1,0 +1,11 @@
+(** @canonical P3.Lexer *)
+module Lexer = P3__Lexer
+
+(** @canonical P3.Nfa *)
+module Nfa = P3__Nfa
+
+(** @canonical P3.Parser *)
+module Parser = P3__Parser
+
+(** @canonical P3.Regex *)
+module Regex = P3__Regex

@@ -1,0 +1,6 @@
+2019-06-20T17:05:35+00:00 WINDOWS-O9ORMVS#03 I: Start test public:2:get_first.
+2019-06-20T17:05:35+00:00 WINDOWS-O9ORMVS#03 I: Test public:2:get_first is successful.
+2019-06-20T17:05:35+00:00 WINDOWS-O9ORMVS#03 I: End test public:2:get_first.
+2019-06-20T17:05:35+00:00 WINDOWS-O9ORMVS#03 I: Start test public:4:set_and_get.
+2019-06-20T17:05:35+00:00 WINDOWS-O9ORMVS#03 I: Test public:4:set_and_get is successful.
+2019-06-20T17:05:35+00:00 WINDOWS-O9ORMVS#03 I: End test public:4:set_and_get.

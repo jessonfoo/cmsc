@@ -1,0 +1,19 @@
+# dune runtest -f
+# OCAMLPARAM: unset
+$ /usr/bin/nproc > /tmp/yashashri/dune0d4400.output 2> /dev/null
+$ /usr/local/bin/ocamlc.opt -config > /tmp/yashashri/dunea8ae68.output
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -impl src/disc.ml) > _build/default/src/.d7.objs/disc.ml.d
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -I src/.d7.objs -I src/.d7.objs/.private -intf-suffix .ml -no-alias-deps -open D7 -o src/.d7.objs/d7__Disc.cmx -c -impl src/disc.ml)
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -a -o src/d7.cmxa src/.d7.objs/d7.cmx src/.d7.objs/d7__Disc.cmx)
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -I test/.public.eobjs -I /home/yashashri/.opam/4.07.0/lib/bytes -I /home/yashashri/.opam/4.07.0/lib/oUnit -I src/.d7.objs -intf-suffix .ml -no-alias-deps -o test/.public.eobjs/student.cmx -c -impl test/student.ml)
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -I test/.public.eobjs -I /home/yashashri/.opam/4.07.0/lib/bytes -I /home/yashashri/.opam/4.07.0/lib/oUnit -I src/.d7.objs -intf-suffix .ml -no-alias-deps -o test/.public.eobjs/public.cmx -c -impl test/public.ml)
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -o test/student.exe -I /home/yashashri/.opam/4.07.0/lib/bytes -I /home/yashashri/.opam/4.07.0/lib/oUnit -I src src/d7.cmxa /home/yashashri/.opam/4.07.0/lib/ocaml/unix.cmxa /home/yashashri/.opam/4.07.0/lib/oUnit/oUnitAdvanced.cmxa /home/yashashri/.opam/4.07.0/lib/oUnit/oUnit.cmxa test/.public.eobjs/student.cmx)
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -o test/public.exe -I /home/yashashri/.opam/4.07.0/lib/bytes -I /home/yashashri/.opam/4.07.0/lib/oUnit -I src src/d7.cmxa /home/yashashri/.opam/4.07.0/lib/ocaml/unix.cmxa /home/yashashri/.opam/4.07.0/lib/oUnit/oUnitAdvanced.cmxa /home/yashashri/.opam/4.07.0/lib/oUnit/oUnit.cmxa test/.public.eobjs/public.cmx)
+$ (cd _build/default/test && ./student.exe)
+> .
+> Ran: 1 tests in: 0.11 seconds.
+> OK
+$ (cd _build/default/test && ./public.exe)
+> .......
+> Ran: 7 tests in: 0.11 seconds.
+> OK

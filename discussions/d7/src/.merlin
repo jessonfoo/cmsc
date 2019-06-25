@@ -1,0 +1,3 @@
+B ../_build/default/src/.d7.objs
+S .
+FLG -open D7 -w -40

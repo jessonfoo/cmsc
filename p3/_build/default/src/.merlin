@@ -1,0 +1,5 @@
+B /home/yashashri/cmsc330summer19-public/p3/dep/sets
+B ../_build/default/src/.p3.objs
+S /home/yashashri/cmsc330summer19-public/p3/dep/sets
+S .
+FLG -open P3 -w -40
