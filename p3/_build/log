@@ -1,8 +1,7 @@
 # dune runtest -f
 # OCAMLPARAM: unset
-$ /usr/bin/nproc > /tmp/yashashri/dunecd25e5.output 2> /dev/null
-$ /usr/local/bin/ocamlc.opt -config > /tmp/yashashri/dune3ff845.output
-$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -impl src/nfa.ml) > _build/default/src/.p3.objs/nfa.ml.d
+$ /usr/bin/nproc > /tmp/yashashri/dune9ee713.output 2> /dev/null
+$ /usr/local/bin/ocamlc.opt -config > /tmp/yashashri/dunef3e18a.output
 $ (cd _build/default && /usr/local/bin/ocamlc.opt -w -40 -g -bin-annot -I src/.p3.objs -I src/.p3.objs/.private -I /home/yashashri/cmsc330summer19-public/p3/dep/sets -no-alias-deps -open P3 -o src/.p3.objs/p3__Nfa.cmo -c -impl src/nfa.ml)
 > File "src/nfa.ml", line 68, characters 53-96:
 > Error: This expression has type 'q list

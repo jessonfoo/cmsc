@@ -1,0 +1,2 @@
+(** @canonical D8.Disc *)
+module Disc = D8__Disc

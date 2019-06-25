@@ -1,3 +1,4 @@
+
 (* NFA Type *)
 
 type ('q, 's) transition = 'q * 's option * 'q
@@ -65,11 +66,7 @@ let rec intersection a b =
 
 (* Returns whether the NFA m accepts string s. *)
 let accept (m : ('q, char) t) (s : string) : bool =
-  if (intersection m.fs (List.fold_left (fun ch a -> (e_closure m 
-  (move m 
-  a 
-  (Some ch)))) 
-  (explode s) (e_closure m [m.q0]))) > 0 then true else false
+  if (intersection m.fs (List.fold_left (fun ch a -> (e_closure m (move m a (Some ch)))) (explode s) (e_closure m [m.q0]))) > 0 then true else false
 
 (* Part 2: Subset Construction *)
 
