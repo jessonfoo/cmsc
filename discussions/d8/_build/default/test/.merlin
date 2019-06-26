@@ -1,3 +1,16 @@
-B ../_build/default/test/.public.eobjs
+EXCLUDE_QUERY_DIR
+B /home/yashashri/.opam/4.07.1/lib/bytes
+B /home/yashashri/.opam/4.07.1/lib/oUnit
+B /home/yashashri/.opam/4.07.1/lib/ocaml
+B /home/yashashri/cmsc330summer19-public/discussions/d8/dep/p3
+B /home/yashashri/cmsc330summer19-public/discussions/d8/dep/sets
+B ../_build/default/src/.d8.objs/byte
+B ../_build/default/test/.public.eobjs/byte
+S /home/yashashri/.opam/4.07.1/lib/bytes
+S /home/yashashri/.opam/4.07.1/lib/oUnit
+S /home/yashashri/.opam/4.07.1/lib/ocaml
+S /home/yashashri/cmsc330summer19-public/discussions/d8/dep/p3
+S /home/yashashri/cmsc330summer19-public/discussions/d8/dep/sets
+S ../src
 S .
 FLG -w -40

@@ -12,24 +12,17 @@ let fresh =
 (* Converts an extended regular expression to an NFA. *)
 let rec nfa_of_regex (r : t) : (int, char) Nfa.t =
   match r with
-  | Maybe r -> 
-      {
-        qs = [0;1;2];
-        ss = ['a'];
-        ts = [(0, Some 'a', 1); (0, None , 1); (1, Some 'a', 2)];
-        q0 = 0;
-        fs = [1];
-      }
-  | Plus r ->
-      {
-        qs = [0;1];
-        ss = ['a'];
-        ts = [(0, None, 0); (0, Some 'a', 1)]
-        q0 = 0;
-        fs = [1];
-      }
-  | Chars (c :: ct) -> failwith "not implemented"
-  | Not r -> failwith "not implemented"
+  | Maybe r -> nfa_of_regex (Union (r, Empty))
+  | Plus r -> nfa_of_regex (Concat (r, Star r))
+  | Chars (c :: ct) -> nfa_of_regex (List.fold_left (fun acc x -> Union (Char x, acc)) (Char c) ct)
+  | Not r -> let dfa = normalize_states(Nfa.dfa_of_nfa(nfa_of_regex r)) in
+    {
+      qs = dfa.qs;
+      ss = dfa.ss;
+      ts = dfa.ts;
+      q0 = dfa.q0;
+      fs = minus dfa.qs dfa.fs;
+    }
   | _ -> nfa_of_regex_open r nfa_of_regex
 
 (* Converts a generic NFA to an NFA where the states are

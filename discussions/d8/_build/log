@@ -1,4 +1,12 @@
-# dune external-lib-deps --missing @runtest
+# dune runtest -f
 # OCAMLPARAM: unset
-$ /usr/bin/nproc > /tmp/yashashri/dune355a98.output 2> /dev/null
-$ /home/yashashri/.opam/4.07.1/bin/ocamlc.opt -config > /tmp/yashashri/dune4f2f98.output
+$ /usr/bin/nproc > /tmp/yashashri/duned6a27b.output 2> /dev/null
+$ /home/yashashri/.opam/4.07.1/bin/ocamlc.opt -config > /tmp/yashashri/dune851df4.output
+$ (cd _build/default/test && ./public.bc)
+> ....
+> Ran: 4 tests in: 0.13 seconds.
+> OK
+$ (cd _build/default/test && ./student.bc)
+> .
+> Ran: 1 tests in: 0.11 seconds.
+> OK

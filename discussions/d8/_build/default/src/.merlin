@@ -1,6 +1,7 @@
+EXCLUDE_QUERY_DIR
 B /home/yashashri/cmsc330summer19-public/discussions/d8/dep/p3
 B /home/yashashri/cmsc330summer19-public/discussions/d8/dep/sets
-B ../_build/default/src/.d8.objs
+B ../_build/default/src/.d8.objs/byte
 S /home/yashashri/cmsc330summer19-public/discussions/d8/dep/p3
 S /home/yashashri/cmsc330summer19-public/discussions/d8/dep/sets
 S .

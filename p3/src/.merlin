@@ -1,5 +1,6 @@
+EXCLUDE_QUERY_DIR
 B /home/yashashri/cmsc330summer19-public/p3/dep/sets
-B ../_build/default/src/.p3.objs
+B ../_build/default/src/.p3.objs/byte
 S /home/yashashri/cmsc330summer19-public/p3/dep/sets
 S .
 FLG -open P3 -w -40

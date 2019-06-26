@@ -1,3 +1,4 @@
+
 (* NFA Type *)
 
 type ('q, 's) transition = 'q * 's option * 'q
@@ -17,22 +18,31 @@ let explode (s : string) : char list =
     if i < 0 then l else exp (i - 1) (s.[i] :: l) in
   exp (String.length s - 1) []
 
-(* Part 1: NFAs *)
+(*( Part 1: NFAs *)
 
 (* Returns the move set of qs on s. *)
-let rec uniq lst =
+let rec uniq (lst: 'q list) =
   match lst with
   |[] -> []
-  |h::t -> if List.mem h lst then uniq t else h::(uniq t)
-
-let rec move_help state value transition_list =
+  |h::t -> if List.mem h t then uniq t else h::(uniq t)
+  (* 
+   *  
+   *  *)
+let rec move_help (state : int)  (value : 's option)  (transition_list)  : 'q list =
   match transition_list with
   |[] -> []
-  |(s,m,l)::t -> if state = s && m = value then l::(move_help state value t) else (move_help state value t)
+  |(s,m,l)::t -> if state = s && (m = value) then l::(move_help state value t) else (move_help state value t)
 
+(* 
+  @param qs list : state
+  @param s option
+  @param m
+ 
+ *)
 let rec move (m : ('q, 's) t) (qs : 'q list) (s : 's option) : 'q list =
   match qs with
   |[] -> []
+  (*take each value in qs, the list of states given, and find each state it can lead to given the option s*)
   |h::t -> uniq((move_help h s m.ts)@(move m t s))
 
 let rec same_states value transitions_list =
@@ -64,12 +74,10 @@ let rec intersection a b =
   |h1::t1, h2::t2 -> if List.mem h1 a && List.mem h1 b then h1::(intersection  t1 b) else intersection t1 b
 
 (* Returns whether the NFA m accepts string s. *)
-let accept (m : ('q, char) t) (s : string) : bool =
-  if (intersection m.fs (List.fold_left (fun ch a -> (e_closure m 
-  (move m 
-  a 
-  (Some ch)))) 
-  (explode s) (e_closure m [m.q0]))) > 0 then true else false
+let accept (m : ('q, char) t) (s : string) : bool = 
+  if List.length
+  (intersection m.fs (List.fold_left (fun ch a -> let ch in (e_closure m (move m a (Some {ch})))) (explode s) (e_closure m [m.q0]))) > 0 
+  then true else false
 
 (* Part 2: Subset Construction *)
 
