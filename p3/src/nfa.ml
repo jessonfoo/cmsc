@@ -74,13 +74,64 @@ let rec intersection a b =
   |h1::t1, h2::t2 -> if List.mem h1 a && List.mem h1 b then h1::(intersection  t1 b) else intersection t1 b
 
 (* Returns whether the NFA m accepts string s. *)
-let accept (m : ('q, char) t) (s : string) : bool = 
-  if List.length
-  (intersection m.fs (List.fold_left (fun ch a -> (e_closure m (move m a (Some {ch})))) (explode s) (e_closure m [m.q0]))) > 0 
-  then true else false
+let accept (m : ('q, char) t) (s : string) : bool =
+  if List.length (intersection m.fs (List.fold_left (fun a ch -> (e_closure m (move m a (Some ch)))) (e_closure m [m.q0]) (explode s))) > 0 then true else false
 
 (* Part 2: Subset Construction *)
+let rec add_to_state_list (nq0: 'q list) (nss: 's list) (nqs: 'q list list) (nts: ('q list, 's) transition list)  (nfs: 'q list list) (m: ('q, 's) t) =
+  match nqs with
+  |[] -> {
+    q0 = nq0;
+    ss = nss;
+    qs = nqs;
+    ts = nts;
+    fs = nfs;
+  }
+  |h::t -> {
+    q0 = nq0;
+    ss = nss;
+    qs = (add_to_state_list nq0 nss (List.fold_left (fun a value -> (e_closure m (move m h (Some value)))::nqs) nqs nss) nts nfs m);
+    ts = nts;
+    fs = nfs;
+  }
+
+
+let rec add_to_transitions_list (nq0: 'q list) (nss: 's list) (nqs: 'q list list) (nts: ('q list, 's) transition list) (nfs: 'q list list) (m: ('q, 's) t) (tail_nqs: 'q list list) =
+  match tail_nqs with
+  |[] -> {
+    q0 = nq0;
+    ss = nss;
+    qs = nqs;
+    ts = nts;
+    fs = nfs;
+  }
+  |h::t -> {
+    q0 = nq0;
+    ss = nss;
+    qs = nqs;
+    ts = (add_to_transitions_list nq0 nss nqs (List.fold_left (fun a value -> (h, value, e_closure m (move m h value))::nts) nts nss) nfs m t);
+    fs = nfs;
+  }
+
+let add_to_final_states (nq0: 'q list) (nss: 's list) (nqs: 'q list list) (nts: ('q list, s) transition list) (nfs: 'q list) (mfs: 'q list) (nqs_tail: 'q list list) =
+  match nqs_tail with
+  |[] -> {
+    q0 = nq0;
+    ss = nss;
+    qs = nqs;
+    ts = nts;
+    fs = nfs;
+  }
+  |h::t -> {
+    q0 = nq0;
+    ss = nss;
+    qs = nqs;
+    ts = nts;
+    fs = uniq(add_to_final_states (nq0 nss nqs nts (List.fold_left (fun a value -> if (List.mem value h) then h::nfs else nfs) nfs mfs) t));
+  }
 
 (* Converts an NFA to a DFA via the subset construction. *)
 let rec dfa_of_nfa (m : ('q, 's) t) : ('q list, 's) t =
-  failwith "not implemented"
+  let n = (add_to_state_list (e_closure (m, [m.q0])) m.ss [e_closure (m, [m.q0])] [] [] m) in
+  let nn = add_to_transitions_list (n.q0 n.ss n.qs n.ts n.fs m n.qs) in
+  add_to_final_states (nn.q0 nn.ss nn.qs nn.ts nn.fs m.fs nn.qs)

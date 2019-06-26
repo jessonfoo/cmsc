@@ -1,8 +1,9 @@
-# dune runtest -f
+# dune utop
 # OCAMLPARAM: unset
-$ /usr/bin/nproc > /tmp/yashashri/dune1a856c.output 2> /dev/null
-$ /home/yashashri/.opam/4.07.1/bin/ocamlc.opt -config > /tmp/yashashri/dunedf834f.output
-$ (cd _build/default && /home/yashashri/.opam/4.07.1/bin/ocamldep.opt -modules -impl src/nfa.ml) > _build/default/src/.p3.objs/nfa.ml.d
-> File "src/nfa.ml", line 79, characters 57-59:
-> Error: Syntax error: operator expected.
+$ /usr/bin/nproc > /tmp/yashashri/dune026823.output 2> /dev/null
+$ /home/yashashri/.opam/4.07.1/bin/ocamlc.opt -config > /tmp/yashashri/dune4682f0.output
+$ (cd _build/default && /home/yashashri/.opam/4.07.1/bin/ocamlc.opt -w -40 -g -bin-annot -I src/.p3.objs/byte -I /home/yashashri/cmsc330summer19-public/p3/dep/sets -no-alias-deps -open P3 -o src/.p3.objs/byte/p3__Nfa.cmo -c -impl src/nfa.ml)
+> File "src/nfa.ml", line 93, characters 9-131:
+> Error: This expression has type (int list, 's) t
+>        but an expression was expected of type int list list
 [2]
