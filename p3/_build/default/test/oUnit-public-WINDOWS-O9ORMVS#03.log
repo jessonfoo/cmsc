@@ -1,0 +1,6 @@
+2019-07-04T02:47:06+00:00 WINDOWS-O9ORMVS#03 I: Start test public:2:nfa_move.
+2019-07-04T02:47:06+00:00 WINDOWS-O9ORMVS#03 I: Test public:2:nfa_move is successful.
+2019-07-04T02:47:06+00:00 WINDOWS-O9ORMVS#03 I: End test public:2:nfa_move.
+2019-07-04T02:47:06+00:00 WINDOWS-O9ORMVS#03 I: Start test public:4:re_to_nfa.
+2019-07-04T02:47:06+00:00 WINDOWS-O9ORMVS#03 I: Test public:4:re_to_nfa is successful.
+2019-07-04T02:47:06+00:00 WINDOWS-O9ORMVS#03 I: End test public:4:re_to_nfa.

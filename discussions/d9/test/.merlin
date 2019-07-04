@@ -1,0 +1,12 @@
+EXCLUDE_QUERY_DIR
+B /home/yashashri/.opam/4.07.1/lib/bytes
+B /home/yashashri/.opam/4.07.1/lib/oUnit
+B /home/yashashri/.opam/4.07.1/lib/ocaml
+B ../_build/default/src/.d9.objs/byte
+B ../_build/default/test/.public.eobjs/byte
+S /home/yashashri/.opam/4.07.1/lib/bytes
+S /home/yashashri/.opam/4.07.1/lib/oUnit
+S /home/yashashri/.opam/4.07.1/lib/ocaml
+S ../src
+S .
+FLG -w -40

@@ -1,1 +1,1 @@
-src/regex.ml: Nfa String
+src/regex.ml: List Nfa String

@@ -1,0 +1,5 @@
+(** @canonical D9.Lexer *)
+module Lexer = D9__Lexer
+
+(** @canonical D9.Parser *)
+module Parser = D9__Parser

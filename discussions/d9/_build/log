@@ -1,0 +1,23 @@
+# dune runtest -f
+# OCAMLPARAM: unset
+$ /usr/bin/nproc > /tmp/yashashri/dune53c112.output 2> /dev/null
+$ /home/yashashri/.opam/4.07.1/bin/ocamlc.opt -config > /tmp/yashashri/dune45051b.output
+$ (cd _build/default && /home/yashashri/.opam/4.07.1/bin/ocamldep.opt -modules -impl src/parser.ml) > _build/default/src/.d9.objs/parser.ml.d
+$ (cd _build/default && /home/yashashri/.opam/4.07.1/bin/ocamlc.opt -w -40 -g -bin-annot -I src/.d9.objs/byte -no-alias-deps -open D9 -o src/.d9.objs/byte/d9__Parser.cmo -c -impl src/parser.ml)
+> File "src/parser.ml", line 44, characters 6-130:
+> Warning 8: this pattern-matching is not exhaustive.
+> Here is an example of a case that is not matched:
+> (Fun (_, _)|App (_, _))
+$ (cd _build/default && /home/yashashri/.opam/4.07.1/bin/ocamlc.opt -w -40 -g -a -o src/d9.cma src/.d9.objs/byte/d9.cmo src/.d9.objs/byte/d9__Lexer.cmo src/.d9.objs/byte/d9__Parser.cmo)
+$ (cd _build/default && /home/yashashri/.opam/4.07.1/bin/ocamlc.opt -w -40 -g -bin-annot -I test/.public.eobjs/byte -I /home/yashashri/.opam/4.07.1/lib/bytes -I /home/yashashri/.opam/4.07.1/lib/oUnit -I src/.d9.objs/byte -I src/.d9.objs/native -no-alias-deps -o test/.public.eobjs/byte/student.cmo -c -impl test/student.ml)
+$ (cd _build/default && /home/yashashri/.opam/4.07.1/bin/ocamlc.opt -w -40 -g -bin-annot -I test/.public.eobjs/byte -I /home/yashashri/.opam/4.07.1/lib/bytes -I /home/yashashri/.opam/4.07.1/lib/oUnit -I src/.d9.objs/byte -I src/.d9.objs/native -no-alias-deps -o test/.public.eobjs/byte/public.cmo -c -impl test/public.ml)
+$ (cd _build/default && /home/yashashri/.opam/4.07.1/bin/ocamlc.opt -w -40 -g -o test/student.bc -I /home/yashashri/.opam/4.07.1/lib/bytes -I /home/yashashri/.opam/4.07.1/lib/oUnit -I src /home/yashashri/.opam/4.07.1/lib/ocaml/str.cma src/d9.cma /home/yashashri/.opam/4.07.1/lib/ocaml/unix.cma /home/yashashri/.opam/4.07.1/lib/oUnit/oUnitAdvanced.cma /home/yashashri/.opam/4.07.1/lib/oUnit/oUnit.cma test/.public.eobjs/byte/student.cmo)
+$ (cd _build/default && /home/yashashri/.opam/4.07.1/bin/ocamlc.opt -w -40 -g -o test/public.bc -I /home/yashashri/.opam/4.07.1/lib/bytes -I /home/yashashri/.opam/4.07.1/lib/oUnit -I src /home/yashashri/.opam/4.07.1/lib/ocaml/str.cma src/d9.cma /home/yashashri/.opam/4.07.1/lib/ocaml/unix.cma /home/yashashri/.opam/4.07.1/lib/oUnit/oUnitAdvanced.cma /home/yashashri/.opam/4.07.1/lib/oUnit/oUnit.cma test/.public.eobjs/byte/public.cmo)
+$ (cd _build/default/test && ./public.bc)
+> ....
+> Ran: 4 tests in: 0.11 seconds.
+> OK
+$ (cd _build/default/test && ./student.bc)
+> .
+> Ran: 1 tests in: 0.11 seconds.
+> OK

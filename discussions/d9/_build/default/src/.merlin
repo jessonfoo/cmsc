@@ -1,0 +1,6 @@
+EXCLUDE_QUERY_DIR
+B /home/yashashri/.opam/4.07.1/lib/ocaml
+B ../_build/default/src/.d9.objs/byte
+S /home/yashashri/.opam/4.07.1/lib/ocaml
+S .
+FLG -open D9 -w -40

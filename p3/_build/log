@@ -1,9 +1,22 @@
-# dune utop
+# dune runtest -f
 # OCAMLPARAM: unset
-$ /usr/bin/nproc > /tmp/yashashri/dune026823.output 2> /dev/null
-$ /home/yashashri/.opam/4.07.1/bin/ocamlc.opt -config > /tmp/yashashri/dune4682f0.output
+$ /usr/bin/nproc > /tmp/yashashri/dune82d8ff.output 2> /dev/null
+$ /home/yashashri/.opam/4.07.1/bin/ocamlc.opt -config > /tmp/yashashri/dunea54943.output
+$ (cd _build/default && /home/yashashri/.opam/4.07.1/bin/ocamldep.opt -modules -impl src/nfa.ml) > _build/default/src/.p3.objs/nfa.ml.d
 $ (cd _build/default && /home/yashashri/.opam/4.07.1/bin/ocamlc.opt -w -40 -g -bin-annot -I src/.p3.objs/byte -I /home/yashashri/cmsc330summer19-public/p3/dep/sets -no-alias-deps -open P3 -o src/.p3.objs/byte/p3__Nfa.cmo -c -impl src/nfa.ml)
-> File "src/nfa.ml", line 93, characters 9-131:
-> Error: This expression has type (int list, 's) t
->        but an expression was expected of type int list list
-[2]
+$ (cd _build/default && /home/yashashri/.opam/4.07.1/bin/ocamlc.opt -w -40 -g -bin-annot -I src/.p3.objs/byte -I /home/yashashri/cmsc330summer19-public/p3/dep/sets -no-alias-deps -open P3 -o src/.p3.objs/byte/p3__Regex.cmo -c -impl src/regex.ml)
+$ (cd _build/default && /home/yashashri/.opam/4.07.1/bin/ocamlc.opt -w -40 -g -bin-annot -I src/.p3.objs/byte -I /home/yashashri/cmsc330summer19-public/p3/dep/sets -no-alias-deps -open P3 -o src/.p3.objs/byte/p3__Parser.cmo -c -impl src/parser.ml)
+$ (cd _build/default && /home/yashashri/.opam/4.07.1/bin/ocamlc.opt -w -40 -g -a -o src/p3.cma src/.p3.objs/byte/p3.cmo src/.p3.objs/byte/p3__Lexer.cmo src/.p3.objs/byte/p3__Nfa.cmo src/.p3.objs/byte/p3__Regex.cmo src/.p3.objs/byte/p3__Parser.cmo)
+$ (cd _build/default && /home/yashashri/.opam/4.07.1/bin/ocamlc.opt -w -40 -g -bin-annot -I test/.public.eobjs/byte -I /home/yashashri/.opam/4.07.1/lib/bytes -I /home/yashashri/.opam/4.07.1/lib/oUnit -I /home/yashashri/cmsc330summer19-public/p3/dep/sets -I src/.p3.objs/byte -I src/.p3.objs/native -no-alias-deps -o test/.public.eobjs/byte/student.cmo -c -impl test/student.ml)
+$ (cd _build/default && /home/yashashri/.opam/4.07.1/bin/ocamlc.opt -w -40 -g -bin-annot -I test/.public.eobjs/byte -I /home/yashashri/.opam/4.07.1/lib/bytes -I /home/yashashri/.opam/4.07.1/lib/oUnit -I /home/yashashri/cmsc330summer19-public/p3/dep/sets -I src/.p3.objs/byte -I src/.p3.objs/native -no-alias-deps -o test/.public.eobjs/byte/testUtils.cmo -c -impl test/testUtils.ml)
+$ (cd _build/default && /home/yashashri/.opam/4.07.1/bin/ocamlc.opt -w -40 -g -bin-annot -I test/.public.eobjs/byte -I /home/yashashri/.opam/4.07.1/lib/bytes -I /home/yashashri/.opam/4.07.1/lib/oUnit -I /home/yashashri/cmsc330summer19-public/p3/dep/sets -I src/.p3.objs/byte -I src/.p3.objs/native -no-alias-deps -o test/.public.eobjs/byte/public.cmo -c -impl test/public.ml)
+$ (cd _build/default && /home/yashashri/.opam/4.07.1/bin/ocamlc.opt -w -40 -g -o test/student.bc -I /home/yashashri/.opam/4.07.1/lib/bytes -I /home/yashashri/.opam/4.07.1/lib/oUnit -I /home/yashashri/cmsc330summer19-public/p3/dep/sets -I src /home/yashashri/cmsc330summer19-public/p3/dep/sets/sets.cma src/p3.cma /home/yashashri/.opam/4.07.1/lib/ocaml/unix.cma /home/yashashri/.opam/4.07.1/lib/oUnit/oUnitAdvanced.cma /home/yashashri/.opam/4.07.1/lib/oUnit/oUnit.cma test/.public.eobjs/byte/student.cmo)
+$ (cd _build/default && /home/yashashri/.opam/4.07.1/bin/ocamlc.opt -w -40 -g -o test/public.bc -I /home/yashashri/.opam/4.07.1/lib/bytes -I /home/yashashri/.opam/4.07.1/lib/oUnit -I /home/yashashri/cmsc330summer19-public/p3/dep/sets -I src /home/yashashri/cmsc330summer19-public/p3/dep/sets/sets.cma src/p3.cma /home/yashashri/.opam/4.07.1/lib/ocaml/unix.cma /home/yashashri/.opam/4.07.1/lib/oUnit/oUnitAdvanced.cma /home/yashashri/.opam/4.07.1/lib/oUnit/oUnit.cma test/.public.eobjs/byte/testUtils.cmo test/.public.eobjs/byte/public.cmo)
+$ (cd _build/default/test && ./public.bc)
+> ......
+> Ran: 6 tests in: 0.15 seconds.
+> OK
+$ (cd _build/default/test && ./student.bc)
+> .
+> Ran: 1 tests in: 0.12 seconds.
+> OK

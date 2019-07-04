@@ -32,14 +32,42 @@ let rec parse (toks : token list) : expr =
   else
     exp
 
+and parse_T' () : expr =
+  match lookahead () with
+  | Tok_Var _ | Tok_LParen ->
+      let m = parse_M () in 
+      let m2 = parse_M () in
+      consume (Tok_RParen);
+      App (m, m2)
+  | Tok_Fun ->
+      consume (Tok_Fun);
+      let (Var m) = parse_X () in
+      consume (Tok_Arrow);
+      let n = parse_M () in
+      consume Tok_RParen;
+      Fun (m,n)
+  | _ -> raise (Failure "parse_T' failure")
+
+
 (* Parses the M (term) rule. *)
 and parse_M () : expr =
-  Var "implement this function"
+  match lookahead () with
+  | Tok_LParen -> 
+      consume (Tok_LParen);
+      parse_T' ()
+  | Tok_Var x ->
+      parse_X ()
+  | _ -> raise (Failure "parse_M failure")
 
 (* Parses the X (variable) rule. *)
 and parse_X () : expr =
-  Var "implement this function"
+  match lookahead () with
+  |Tok_Var blah -> consume (Tok_Var blah); (Var blah)
+  | _ -> raise (Failure "parse_X failure")
 
 (* Returns string representation of the AST. *)
 let rec string_of_expr (m : expr) : string =
-  "implement this function"
+  match m with
+  | Fun (v, i) -> v ^ (string_of_expr i)
+  | App (m, n) -> (string_of_expr m) ^ (string_of_expr n)
+  | Var vr -> vr
